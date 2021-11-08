@@ -28,9 +28,11 @@ calculator.addEventListener('change', () => {
         closeBtn.addEventListener('click', () => {
             formControl.classList.remove('is-invalid')
             formControl.value = ''
+            aspectNumbers.style.display = 'none'
         })
         if (/\D/.test(formControl.value)) {
             formControl.classList.add('is-invalid')
+            aspectNumbers.style.display = 'none'
             const toast = new bootstrap.Toast(errorToast)
             toast.show()
 
@@ -97,6 +99,10 @@ calculator.addEventListener('change', () => {
     // Output numbers
     if (newSize.value) {
         aspectNumbers.style.display = 'block'
+    }
+
+    if (!newSize.value) {
+        aspectNumbers.style.display = 'none'
     }
 })
 
