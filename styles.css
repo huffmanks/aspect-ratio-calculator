@@ -49,6 +49,7 @@ body {
 
 .aspect-box {
     position: relative;
+    aspect-ratio: 1.6 / 1;
     background-color: var(--bs-primary);
     min-width: 150px;
     max-width: 504px;

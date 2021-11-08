@@ -106,6 +106,7 @@ calculator.addEventListener('change', () => {
 
 // Clear form
 clearBtn.addEventListener('click', () => {
+    aspectBox.style.aspectRatio = 1.6 / 1
     aspectNumbers.style.display = 'none'
     calculator.reset()
 })
