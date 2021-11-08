@@ -67,14 +67,13 @@ calculator.addEventListener('change', () => {
 
             newWidth.innerText = newSize.value
             newHeight.innerText = newOtherSize
-            aspectHeight.innerText = '1'
+            aspectHeight.innerText = 1
 
-            let aspectRat = newSize.value / newOtherSize
-            if (aspectRat === 1) {
+            if (newSize.value / newOtherSize === 1) {
                 aspectWidth.innerText = 1
-            } else {
-                aspectWidth.innerText = (newSize.value / newOtherSize).toFixed(6)
             }
+
+            aspectWidth.innerText = (newSize.value / newOtherSize).toFixed(2)
         }
 
         // If new height is selected
@@ -85,14 +84,13 @@ calculator.addEventListener('change', () => {
 
             newWidth.innerText = newOtherSize
             newHeight.innerText = newSize.value
-            aspectWidth.innerText = '1'
+            aspectHeight.innerText = 1
 
-            let aspectRat = newSize.value / newOtherSize
-            if (aspectRat === 1) {
-                aspectHeight.innerText = 1
-            } else {
-                aspectHeight.innerText = (newSize.value / newOtherSize).toFixed(6)
+            if (newOtherSize / newSize.value === 1) {
+                aspectWidth.innerText = 1
             }
+
+            aspectWidth.innerText = (newOtherSize / newSize.value).toFixed(2)
         }
     }
 
